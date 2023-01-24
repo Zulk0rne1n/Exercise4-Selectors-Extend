@@ -1,0 +1,55 @@
+@use "variables.scss" as var;
+@use "convert.scss" as conv;
+
+
+@mixin article-style($color, $border-color, $font-size) {
+  font-size: conv.convertToRem($font-size);
+  color: $color;
+  margin: 0;
+  border: conv.convertToRem(2) solid;
+  border-color: $border-color;
+}
+
+.exercise {
+  border: conv.convertToRem(2) solid var.$primary;
+  padding: conv.convertToRem(8);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+
+
+  &-title {
+    color: var.$tertiary;
+    text-decoration: underline;
+    text-decoration-color: var.$secondary;
+    &_sub {
+      @extend .exercise-title;
+      padding: conv.convertToRem(16);
+      border: conv.convertToRem(2) solid var.$primary;
+      text-decoration: none;
+      align-self: center;
+    }
+  }
+
+
+  .first-section {
+    display: flex;
+
+    article {
+      padding: conv.convertToRem(8);
+
+      &:nth-child(odd) {
+        @include article-style(var.$secondary, var.$tertiary, 16);
+      }
+      &:nth-child(even) {
+        @include article-style(var.$primary, var.$tertiary, 16);
+      }
+    }
+  }
+
+  .footer {
+    @include article-style(var.$tertiary, var.$secondary, 24);
+    margin-top: conv.convertToRem(10);
+  }
+}

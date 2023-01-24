@@ -1,0 +1,48 @@
+.exercise {
+  border: 0.125rem solid red;
+  padding: 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.exercise-title, .exercise-title_sub {
+  color: green;
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
+.exercise-title_sub {
+  padding: 1rem;
+  border: 0.125rem solid red;
+  text-decoration: none;
+  align-self: center;
+}
+.exercise .first-section {
+  display: flex;
+}
+.exercise .first-section article {
+  padding: 0.5rem;
+}
+.exercise .first-section article:nth-child(odd) {
+  font-size: 1rem;
+  color: blue;
+  margin: 0;
+  border: 0.125rem solid;
+  border-color: green;
+}
+.exercise .first-section article:nth-child(even) {
+  font-size: 1rem;
+  color: red;
+  margin: 0;
+  border: 0.125rem solid;
+  border-color: green;
+}
+.exercise .footer {
+  font-size: 1.5rem;
+  color: green;
+  margin: 0;
+  border: 0.125rem solid;
+  border-color: blue;
+  margin-top: 0.625rem;
+}
+
+/*# sourceMappingURL=style.css.map */
